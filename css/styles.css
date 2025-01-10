@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "neue haas grotesk display pro";
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+.main{
+    background-color: #000;
+}
+
+.intro{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+
+nav{
+    width: 100%;
+    padding: 2vw 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+.btns a{
+    text-decoration: none;
+    color: #000000b0;
+    border: 1px solid rgba(0, 0, 0, 0.697);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+    transition: all ease 0.4s;
+}
+
+.btns a::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+    z-index: -1;
+}
+
+.btns a:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+.btns a:hover{
+    color: white;
+}
+
+.hero-section{
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #0000003c;
+    padding-bottom: 2.5vw;
+}
+
+.hleft h3{
+    font-size: 1.8vw;
+    width: 25vw;
+    font-weight: 100;
+    line-height: 2vw;
+}
+
+.hright h1{
+    font-size: 9vw;
+    line-height: 8vw;
+    text-align: right;
+}
+
+.intro video{
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 4vw;
+    position: relative;
+}
+
+.hero-image{
+    width: 55vw;
+    height: 37vw;
+    position: absolute;
+    right: 0;
+    top: 75vh;
+}
+
+.hero1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    filter: blur(25px);
+    background: linear-gradient(#FE330A, #fe3116);
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.hero2{
+    width: 30vw;
+    height: 30vw;
+    position: relative;
+    filter: blur(25px);
+    background: linear-gradient(#FE330A, #fe3116);
+    border-radius: 50%;
+    animation: anime1 3s linear alternate infinite;
+}
+
+.hero3{
+    width: 30vw;
+    height: 30vw;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    filter: blur(25px);
+    background: linear-gradient(#FE330A, #FE5216);
+    border-radius: 50%;
+    animation: anime2 5s linear alternate infinite;
+}
+
+@keyframes anime1{
+    from{
+        transform: translate(25%, -6%);
+    }
+    to{
+        transform: translate(5%, 22%);
+    }
+}
+
+@keyframes anime2{
+    from{
+        transform: translate(100%, -60%);
+    }
+    to{
+        transform: translate(100%, -114%);
+    }
+}
+
+.sec{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 4vw 0;
+}
+
+.text-scroll{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.text-scroll::-webkit-scrollbar{
+    display: none;
+}
+
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation: slider 10s linear infinite;
+}
+
+.con h1{
+    font-size: 8.5vw;
+    display: inline-block;
+}
+
+.circle{
+    height: 70px;
+    width: 70px;
+    background-color: #FE5216;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+
+@keyframes slider{
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+
+.bottom{
+    height: 80vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4.5vw;
+    position: relative;
+}
+
+.bottom h1{
+    font-size: 4vw;
+    width: 63%;
+    color: #000;
+    font-weight: 600;
+    line-height: 4vw;
+    z-index: 9;
+}
+
+.bt-img{
+    width: 20%;
+    background-color: #EFEAE3;
+}
+
+.bt-img img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.bt-img p{
+    font-weight: 200;
+    margin-top: 2vw;
+    font-size: 1vw;
+}
+
+.circ{
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+    top: 50%;
+    left: 27%;
+    border-radius: 50%;
+    background-color: #ff9831;
+    filter: blur(10px);
+}
+.c1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ff9831;
+    filter: blur(10px);
+    animation: circle1 3s ease-in infinite alternate;
+}
+
+.c2{
+    width:100%;
+    height:100%;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fe330a;
+    filter: blur(50px);
+    animation: circle2 3s ease-in infinite alternate;
+}
+
+@keyframes circle1 {
+    from{
+        transform: translate(-5%,10%) skew(0deg)
+    }
+    to{
+        transform: translate(5%,-6%) skew(-10deg)
+    }
+}
+
+@keyframes circle2 {
+    from{
+        transform: translate(-5%,10%);
+    }
+    to{
+        transform: translate(5%,-6%);
+    }
+}
+
+.projects{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+
+.feature{
+    display: flex;
+    gap: 0.5vw;
+    padding: 3vw 2vw;
+    align-items: center;
+}
+
+.gola{
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: #FE330A;
+}
+
+.elem{
+    width: 100%;
+    height: 150px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    border-bottom: 0.2px solid #0000001b;
+    position: relative;
+    overflow: hidden;
+}
+
+.elem h2{
+    font-size: 2.8vw;
+    position: relative;
+    z-index: 9;
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.3s;
+}
+
+.elem:hover .overlay{
+    top: 0;
+}
+
+#fixed-img{
+    height: 30vw;
+    width: 24vw;
+    position: fixed;
+    border-radius: 10px;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-position: center;
+    background-size: cover;
+}
